@@ -1,8 +1,8 @@
 class Transaction;
     local bit[7:0] data;
     
-    function new(bit[7:0] data2);
-        this.data = data2;
+    function new(bit[7:0] data);
+        this.data = data;
     endfunction
     
     virtual function bit[7:0] getData();
