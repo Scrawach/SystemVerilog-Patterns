@@ -1,7 +1,7 @@
 module AbstractFactory_tb;
     
     initial begin
-        DummyTransaction trans = new();
+        DummyTransaction trans = new(170);
         StableGenerator stableGen = new(trans);
         RandomGenerator randomGen = new();
         Transaction example;
