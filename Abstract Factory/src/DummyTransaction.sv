@@ -8,4 +8,9 @@ class DummyTransaction implements Transaction;
   virtual function bit[7:0] getData();
     return payload;
   endfunction
+  
+  virtual function Transaction clone();
+    DummyTransaction dummyClone = new(payload);
+    return dummyClone;
+  endfunction
 endclass 
