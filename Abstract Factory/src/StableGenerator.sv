@@ -6,7 +6,6 @@ class StableGenerator implements Generator;
   endfunction
 
   virtual function Transaction getTransaction();
-    Transaction clone = blueprint.clone();
-    return clone;
+    return blueprint.clone();
   endfunction
 endclass 
