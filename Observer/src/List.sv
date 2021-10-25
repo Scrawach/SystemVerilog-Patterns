@@ -1,12 +1,12 @@
-class List#(type T = int);
-    local T array[];
+class List#(type TValue = int);
+    local TValue array[];
 
     function new();
         array = new[0];
     endfunction : new
 
     // Return element by index
-    function T at(int index);
+    function TValue at(int index);
         return array[index];
     endfunction : at
 
@@ -16,8 +16,8 @@ class List#(type T = int);
     endfunction : count
 
     // Add item in array
-    function add(T item);
-        T temp[] = new[array.size + 1];
+    function add(TValue item);
+        TValue temp[] = new[array.size + 1];
 
         for (int i = 0; i < array.size; i++) temp[i] = array[i];
 
@@ -26,13 +26,9 @@ class List#(type T = int);
     endfunction : add
 
     // Remove first equal element
-    function remove(T item);
+    function remove(TValue item);
         bit first_been_removed;
-        T temp[] = new[array.size - 1];
-
-        if (!contains(item)) begin
-            return 0;
-        end
+        TValue temp[] = new[array.size - 1];
 
         first_been_removed = 0;
         for (int i = 0, j = 0; i < array.size; i++) begin
@@ -49,7 +45,7 @@ class List#(type T = int);
     endfunction : remove
 
     // Return 1 if this item exist in array
-    function bit contains(T item);
+    function bit contains(TValue item);
         foreach (array[i]) if (array[i] == item) return 1;
         return 0;
     endfunction : contains
