@@ -1,2 +1,2 @@
-# Observer
-Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+# Abstract Factory
+Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. Best way to implementation is use interfaces.
